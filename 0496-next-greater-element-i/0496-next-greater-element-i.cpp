@@ -2,6 +2,9 @@ class Solution {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) 
     {
+        // Time Complexity: O(m * n)
+        // Space Complexity: O(m)
+        
         vector<int> ans;
         for(int i = 0 ; i < nums1.size() ; i++)
         {
@@ -11,13 +14,6 @@ public:
                 if( nums2[j] == number )
                 {
                     int index = j;
-                    /*
-                    if( index == nums2.size() - 1)
-                    {
-                        ans.push_back(-1);
-                        break;
-                    }
-                    */
                     index++;
                     while(index < nums2.size() && nums2[index] < number )
                     {
