@@ -1,3 +1,4 @@
+/* MY APPROACH USING STACK        TC = O(N)   SC = O(N)
 class Solution {
 public:
     string reverseWords(string s) 
@@ -27,5 +28,24 @@ public:
             st.pop();
         }
         return ans;
+    }
+};
+*/
+
+   //SOLTUION     TC = O(N)   SC = O(1)
+class Solution {
+public:
+    string reverseWords(string s) {
+        int i=0;
+        for(int j=0;j<s.length();j++)
+        {
+            if(s[j]==' ')
+            {
+                reverse(s.begin()+i,s.begin()+j);
+                i=j+1;
+            }
+        }
+        reverse(s.begin()+i,s.end());
+        return s;
     }
 };
