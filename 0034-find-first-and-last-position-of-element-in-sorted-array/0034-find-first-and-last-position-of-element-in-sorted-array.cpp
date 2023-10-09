@@ -2,17 +2,19 @@ class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) 
     {
+        vector<int> ans = {-1, -1}; // Initialize ans with invalid values
         if (nums.size() == 0)
-            return {-1, -1};
+            return ans;
         if (nums.size() == 1)
         {
             if (nums[0] == target)
                 return {0, 0};
             else
-                return {-1, -1};
+                return ans;
         }
+        
         int low = 0, high = nums.size() - 1;
-        vector<int> ans = {-1, -1}; // Initialize ans with invalid values
+       
         while (low <= high)
         {
             int mid = (low + high) / 2;
