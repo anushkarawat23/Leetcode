@@ -12,6 +12,7 @@ class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) 
     {
+        /*  TC = O(N)   SC = O(N)
         set<int> s;
         ListNode* temp = head;
         ListNode* prev = NULL;
@@ -30,5 +31,24 @@ public:
             }
         }
         return head;
+        */
+
+        ListNode* prev = head;
+        ListNode* temp = head -> next;
+        while(temp)
+        {
+            if(prev -> val == temp -> val)
+            {
+                prev -> next = temp -> next;
+                temp = temp -> next;
+            }
+            else
+            {
+                prev = temp;
+                temp = temp -> next;
+            }
+        }
+        return head;
+
     }
 };
