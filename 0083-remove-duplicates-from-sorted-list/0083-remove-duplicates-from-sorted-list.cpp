@@ -32,7 +32,8 @@ public:
         }
         return head;
         */
-
+        if(!head || !head -> next)
+            return head;
         ListNode* prev = head;
         ListNode* temp = head -> next;
         while(temp)
