@@ -32,6 +32,9 @@ public:
         }
         return head;
         */
+
+        // TC = O(N)   SC = O(1)
+
         if(!head || !head -> next)
             return head;
         ListNode* prev = head;
