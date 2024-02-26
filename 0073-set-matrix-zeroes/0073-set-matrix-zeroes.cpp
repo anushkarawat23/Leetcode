@@ -1,6 +1,6 @@
 class Solution {
 public:
-
+    // TC = O(mn)  SC = O(min(m,n))
     void func(vector<vector<int>>& matrix, int row, int col)
     {
         for(int j = 0 ; j < matrix[row].size() ; j++)
